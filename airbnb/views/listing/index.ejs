@@ -1,0 +1,39 @@
+<% layout('layout/layout.ejs') -%>
+
+  
+    <!-- <form action="/listing/new" method="get">
+        <button type="submit">New</button>
+    </form> -->
+ <div class="container">
+        <% for(listItem of list){ %>
+            <div class="card" style="width: 18rem; height: 40rem;">
+                <img class="card-img-top" src="<%=listItem.image%>" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title"><a href="http://localhost:8080/listing/<%=listItem.id%>"><%=listItem.title%></a></h5>
+                  <p class="card-text"><%=listItem.description%></p>
+                  <p class="price">price:  &#8377;<%=listItem.price.toLocaleString("en-IN") %></p>
+                  <p class="country">country:<%=listItem.country%></p>
+                  <p class="location">location:<%=listItem.location%></p>
+               
+                
+                </div>
+              </div>
+
+            <% } %> 
+ </div>
+        <!-- <% for(listItem of list){ %>
+            <div>
+                <h6><a href="http://localhost:8080/listing/<%= listItem.id %>"> <%= listItem.title %></a>
+                   
+                </h6>
+                   
+                
+                <img src="<%= listItem.image %>" alt="">
+                <form action="/listing/<%=listItem.id %>?_method=DELETE" method="post">
+                    <button type="submit">Delete</button>
+                </form>
+            </div>
+
+            <% } %> -->
+    </div>
+     

@@ -1,0 +1,78 @@
+<% layout('layout/layout.ejs') -%>
+<body>
+<div class="row col-8 mx-auto">
+
+    <form action="/listing" method="post" novalidate class="needs-validation ">
+
+        <div>
+            <label for="title">Title</label>
+            <input type="text" name="list[title]" id="title" class="form-control"  required> 
+            <div class="invalid-feedback">
+                Add a valid title
+               </div>
+               <div class="valid-feedback">
+                 Looks good!
+               </div>
+        </div>
+       <div>
+        <label for="text">Add Description</label>
+        <textarea name="list[description]" id="text" class="form-control"  required></textarea>
+        <div class="invalid-feedback">
+            Add a valid description
+           </div>
+           <div class="valid-feedback">
+             Looks good!
+           </div>
+       </div>
+       <div>
+        <label for="price">Price</label>
+        <input type="text" name="list[price]" placeholder="Price" class="form-control" id="price" required>
+       </div>
+        <div>
+        <label for="location">Location</label>
+        <input type="text"  name="list[location]" placeholder="Location" class="form-control" id="location"  required>
+        <div class="invalid-feedback">
+            Add a valid location
+           </div>
+           <div class="valid-feedback">
+             Looks good!
+           </div>
+       </div> 
+       <div>
+        <label for="img">Image</label>
+        <input type="text"  name="list[image]" placeholder="Image URL" class="form-control" id="img"  required>
+        <div class="invalid-feedback">
+           Add a valid image
+          </div>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+       </div> 
+       <div>
+        <label for="country">Country</label>
+        <input type="text"  name="list[country]" class="form-control" id="country"  required placeholder="country">
+        <div class="invalid-feedback">
+            Add a country
+           </div>
+           <div class="valid-feedback">
+             Looks good!
+           </div>
+       </div>
+        <button type="submit">Submit</button>
+     
+    </form> 
+
+</div>
+  
+    </body>
+    <!-- <form action="/listing" method="post">
+        <input type="text" value="" name="list[title]" placeholder="Title" required> <br>
+        <textarea name="list[description]" id=""></textarea><br>
+        <input type="text" value="" name="list[price]" placeholder="Price" required><br>
+        <input type="text" value="" name="list[location]" placeholder="Location" required> <br>
+        <input type="text" value="" name="list[image]" placeholder="Image URL" required><br>
+        <input type="text" name="list[country]" id=""> <br>
+       <button type="submit">Submit</button>
+
+    </form>
+</body> -->
